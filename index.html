@@ -3,838 +3,1278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giftxindia | Luxury Corporate Gifting & Lasting Impressions</title>
+  <title>GIFTXINDIA | Corporate Gifts, Lasting Impressions</title>
+  <meta name="description" content="Custom corporate gifts, onboarding kits, festive hampers, and promotional merchandise with precision branding and Pan India delivery." />
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond -->
+  
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            brandNavy: '#0c2340',
-            brandNavyDark: '#061426',
-            brandNavyLight: '#143865',
-            brandOrange: '#f28522',
-            brandOrangeHover: '#d97013',
-            brandOrangeLight: '#fff7ed',
-            goldAccent: '#d4af37'
-          },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0B1B3D',
+              'navy-light': '#142A5C',
+              'navy-dark': '#050D1E',
+              orange: '#F58220',
+              'orange-hover': '#DC6F13',
+              charcoal: '#1E293B',
+              muted: '#64748B',
+              surface: '#F8FAFC',
+              border: '#E2E8F0',
+            }
+          },
+          boxShadow: {
+            'premium': '0 10px 30px -10px rgba(11, 27, 61, 0.08)',
+            'premium-hover': '0 20px 40px -15px rgba(11, 27, 61, 0.15)',
           }
         }
       }
     }
   </script>
+
   <style>
-    .page-view { display: none; }
-    .page-view.active { display: block; animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
+    .product-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .nav-btn.active {
-      color: #f28522 !important;
-      position: relative;
+    .product-card:hover {
+      transform: translateY(-4px);
     }
-    .nav-btn.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #f28522;
-      border-radius: 2px;
-    }
-    .slide-item {
-      transition: opacity 0.8s ease-in-out;
+    .hero-slide {
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
   </style>
 </head>
-<body class="bg-[#fafafa] text-slate-900 font-sans antialiased selection:bg-brandOrange selection:text-white flex flex-col min-h-screen">
+<body class="bg-white text-brand-charcoal font-sans antialiased selection:bg-brand-orange selection:text-white">
 
-  <!-- TOP LUXURY BANNER -->
-  <div class="bg-brandNavyDark text-slate-300 text-xs py-2 px-4 border-b border-brandNavy/60">
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <span class="tracking-widest uppercase font-semibold text-[11px] text-slate-400">
-        Corporate Gifts, Lasting Impressions • Pan-India White Glove Logistics
-      </span>
-      <div class="flex items-center space-x-6 text-[11px]">
-        <a href="mailto:info.giftxindia@gmail.com" class="hover:text-brandOrange transition flex items-center gap-1.5">
-          <i data-lucide="mail" class="w-3.5 h-3.5 text-brandOrange"></i> info.giftxindia@gmail.com
-        </a>
-        <a href="tel:+919451720757" class="hover:text-brandOrange transition flex items-center gap-1.5 font-bold text-white">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-brandOrange"></i> +91 94517 20757
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+        <span>B2B Procurement Platform | Pre-Booking Open for Corporate Festive Hampers & Custom Kits</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <span>Pan India Delivery</span>
+        <span>•</span>
+        <a href="tel:+9194517250757" class="text-white hover:text-brand-orange font-semibold flex items-center gap-1">
+          <i data-lucide="phone-call" class="w-3 h-3"></i> +91 94517250757
         </a>
       </div>
     </div>
   </div>
 
-  <!-- NAVIGATION HEADER -->
-  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-      
-      <!-- LOGO: Vector-Rendered Brand SVG -->
-      <a href="javascript:void(0)" onclick="switchPage('home')" class="flex items-center gap-3">
-        <svg class="w-12 h-12" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Outer Box -->
-          <path d="M16 46H84V84C84 86.2 82.2 88 80 88H20C17.8 88 16 86.2 16 84V46Z" fill="#0c2340"/>
-          <!-- Lid -->
-          <rect x="11" y="33" width="78" height="13" rx="2" fill="#0c2340"/>
-          <!-- Ribbon Loops -->
-          <path d="M30 33C18 18 34 10 46 25C47 27 48 30 48 33H30Z" fill="none" stroke="#0c2340" stroke-width="4.5"/>
-          <path d="M70 33C82 18 66 10 54 25C53 27 52 30 52 33H70Z" fill="none" stroke="#0c2340" stroke-width="4.5"/>
-          <!-- Orange Bow Wings -->
-          <path d="M19 28C27 20 44 28 48 33C40 33 29 32 19 28Z" fill="#f28522"/>
-          <path d="M81 28C73 20 56 28 52 33C60 33 71 32 81 28Z" fill="#f28522"/>
-          <!-- Corporate Tie Icon -->
-          <polygon points="50,39 56,44 54,49 46,49 44,44" fill="#f28522"/>
-          <polygon points="46,49 54,49 57,75 50,83 43,75" fill="#f28522"/>
-        </svg>
-        <div class="flex flex-col">
-          <span class="text-2xl font-extrabold tracking-tight text-brandNavy leading-none">
-            gift<span class="text-brandOrange">x</span>india
-          </span>
-          <span class="text-[8px] tracking-[0.25em] uppercase font-bold text-slate-500 mt-1">
-            Corporate Gifts
-          </span>
-        </div>
-      </a>
-
-      <!-- 8-PAGE NAVIGATION TABS -->
-      <nav class="hidden xl:flex space-x-7 text-[13px] uppercase tracking-wider font-bold text-slate-700">
-        <button onclick="switchPage('home')" id="nav-home" class="nav-btn active py-7 transition">Home</button>
-        <button onclick="switchPage('catalog')" id="nav-catalog" class="nav-btn py-7 transition">Catalog</button>
-        <button onclick="switchPage('branding')" id="nav-branding" class="nav-btn py-7 transition">Branding Studio</button>
-        <button onclick="switchPage('process')" id="nav-process" class="nav-btn py-7 transition">How It Works</button>
-        <button onclick="switchPage('pricing')" id="nav-pricing" class="nav-btn py-7 transition">Pricing Tiers</button>
-        <button onclick="switchPage('about')" id="nav-about" class="nav-btn py-7 transition">About Us</button>
-        <button onclick="switchPage('faq')" id="nav-faq" class="nav-btn py-7 transition">FAQ</button>
-        <button onclick="switchPage('contact')" id="nav-contact" class="nav-btn py-7 transition">Contact</button>
-      </nav>
-
-      <!-- CTA -->
-      <div class="flex items-center gap-3">
-        <button onclick="switchPage('contact')" class="bg-brandOrange hover:bg-brandOrangeHover text-white px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-bold shadow-md hover:shadow-lg transition">
-          Request Quote
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN ROUTER CONTAINER ==================== -->
-  <main class="flex-grow">
-
-    <!-- ==================== 1. HOME VIEW ==================== -->
-    <div id="view-home" class="page-view active">
-      
-      <!-- HERO SLIDER SECTION -->
-      <section class="relative bg-brandNavy text-white overflow-hidden min-h-[580px] lg:min-h-[640px] flex items-center">
+  <!-- Sticky Header with Logo -->
+  <header id="main-header" class="sticky top-0 z-50 bg-white border-b border-brand-border transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3" id="header-container">
         
-        <!-- Slide 1: Welcome Kits -->
-        <div class="slide-item absolute inset-0 w-full h-full flex items-center opacity-100">
-          <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Executive Kits" class="absolute inset-0 w-full h-full object-cover opacity-20" />
-          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-            <div class="max-w-2xl">
-              <span class="inline-flex items-center gap-2 px-3 py-1 bg-brandOrange/20 border border-brandOrange/50 text-brandOrange text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Curated Joining Kits 2026
-              </span>
-              <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
-                Crafting Executive Gifts, Leaving <span class="text-brandOrange font-serif italic">Lasting Impressions.</span>
-              </h1>
-              <p class="mt-5 text-base sm:text-lg text-slate-300">
-                From high-end employee onboarding sets to festive luxury hampers. Flawless custom debossing, laser etching, and direct multi-address doorstep delivery.
-              </p>
-              <div class="mt-8 flex flex-wrap gap-4">
-                <button onclick="switchPage('contact')" class="bg-brandOrange hover:bg-brandOrangeHover text-white px-8 py-3.5 rounded-lg text-sm font-bold shadow-xl transition">
-                  Request Free Sample Box
-                </button>
-                <button onclick="switchPage('catalog')" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-3.5 rounded-lg text-sm font-bold transition">
-                  Explore 2026 Catalog
-                </button>
-              </div>
-            </div>
-          </div>
+        <!-- Official Logo SVG Vector -->
+        <a href="#" class="flex items-center gap-3 group">
+          <svg viewBox="0 0 540 135" class="h-12 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gift Box Icon with Tie -->
+            <path d="M48 24C48 10 32 6 22 20C12 34 46 44 48 44C50 44 84 34 74 20C64 6 48 10 48 24Z" stroke="#0B1B3D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M12 44C26 38 48 44 48 44C48 44 70 38 84 44" fill="#F58220"/>
+            <rect x="10" y="44" width="76" height="15" rx="3" fill="#0B1B3D"/>
+            <path d="M15 63H81V96C81 103 76 109 48 112C20 109 15 103 15 96V63Z" fill="#0B1B3D"/>
+            <!-- Necktie in Orange -->
+            <polygon points="41,63 55,63 52,73 44,73" fill="#F58220"/>
+            <polygon points="44,75 52,75 56,104 48,114 40,104" fill="#F58220"/>
+
+            <!-- Wordmark: giftxindia -->
+            <text x="106" y="66" font-family="Inter, sans-serif" font-weight="900" font-size="62" fill="#0B1B3D" letter-spacing="-1.5">giftx</text>
+            <text x="256" y="66" font-family="Inter, sans-serif" font-weight="900" font-size="62" fill="#0B1B3D" letter-spacing="-1.5">india</text>
+
+            <!-- Tagline: Corporate Gifts, Lasting Impressions -->
+            <line x1="108" y1="96" x2="148" y2="96" stroke="#F58220" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="156" y="99" font-family="Inter, sans-serif" font-weight="800" font-size="16" fill="#0B1B3D" letter-spacing="4">CORPORATE GIFTS,</text>
+            <line x1="392" y1="96" x2="432" y2="96" stroke="#F58220" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="142" y="122" font-family="Inter, sans-serif" font-weight="800" font-size="16" fill="#0B1B3D" letter-spacing="4.5">LASTING IMPRESSIONS</text>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
+          <a href="#categories" class="hover:text-brand-orange transition-colors">Categories</a>
+          <a href="#products" class="hover:text-brand-orange transition-colors">Bestsellers</a>
+          <a href="#solutions" class="hover:text-brand-orange transition-colors">Solutions</a>
+          <a href="#customization" class="hover:text-brand-orange transition-colors">Custom Branding</a>
+          <a href="#process" class="hover:text-brand-orange transition-colors">How It Works</a>
+          <a href="#faq" class="hover:text-brand-orange transition-colors">FAQs</a>
+        </nav>
+
+        <!-- CTA Action Buttons -->
+        <div class="hidden lg:flex items-center space-x-3">
+          <a href="https://wa.me/9194517250757?text=Hello%20GIFTXINDIA%20Team,%20I%20am%20interested%20in%20corporate%20gifting." target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-bold text-slate-700 hover:text-brand-orange border border-slate-300 rounded-md hover:border-brand-orange transition-all flex items-center gap-1.5">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i> WhatsApp Us
+          </a>
+          <a href="#quote-section" class="px-5 py-2 rounded-md bg-brand-orange hover:bg-brand-orange-hover text-white text-xs font-bold tracking-wide shadow-sm transition-all">
+            Get a Quote
+          </a>
         </div>
 
-        <!-- Slide 2: Festive Luxury -->
-        <div class="slide-item absolute inset-0 w-full h-full flex items-center opacity-0 pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1800&q=80" alt="Festive Hampers" class="absolute inset-0 w-full h-full object-cover opacity-20" />
-          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-            <div class="max-w-2xl">
-              <span class="inline-flex items-center gap-2 px-3 py-1 bg-brandOrange/20 border border-brandOrange/50 text-brandOrange text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-                <i data-lucide="gift" class="w-3.5 h-3.5"></i> Festive & Royal Gourmet
-              </span>
-              <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
-                Bespoke Hampers For <span class="text-brandOrange font-serif italic">VIP Stakeholders.</span>
-              </h1>
-              <p class="mt-5 text-base sm:text-lg text-slate-300">
-                California jumbo dry fruits, artisanal Belgian confections, brass diyas, and gold-foiled rigid magnetic keepsake boxes.
-              </p>
-              <div class="mt-8 flex flex-wrap gap-4">
-                <button onclick="switchPage('contact')" class="bg-brandOrange hover:bg-brandOrangeHover text-white px-8 py-3.5 rounded-lg text-sm font-bold shadow-xl transition">
-                  Get Bulk Festive Proposal
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3: Smart Tech Swag -->
-        <div class="slide-item absolute inset-0 w-full h-full flex items-center opacity-0 pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1521478706270-f2e33c203d95?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tech Hampers" class="absolute inset-0 w-full h-full object-cover opacity-20" />
-          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-            <div class="max-w-2xl">
-              <span class="inline-flex items-center gap-2 px-3 py-1 bg-brandOrange/20 border border-brandOrange/50 text-brandOrange text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-                <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Premium Technology Swag
-              </span>
-              <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
-                Smart Gear That Keeps Your <span class="text-brandOrange font-serif italic">Brand Connected.</span>
-              </h1>
-              <p class="mt-5 text-base sm:text-lg text-slate-300">
-                10,000mAh magnetic powerbanks, active noise-cancelling audio sets, and smart temperature tumblers branded to perfection.
-              </p>
-              <div class="mt-8 flex flex-wrap gap-4">
-                <button onclick="switchPage('catalog')" class="bg-brandOrange hover:bg-brandOrangeHover text-white px-8 py-3.5 rounded-lg text-sm font-bold shadow-xl transition">
-                  Browse Tech Gifts
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button onclick="moveSlide(-1)" class="absolute left-5 top-1/2 -translate-y-1/2 bg-brandNavyDark/80 hover:bg-brandOrange p-3 rounded-full text-white transition z-20 border border-white/10">
-          <i data-lucide="chevron-left" class="w-5 h-5"></i>
-        </button>
-        <button onclick="moveSlide(1)" class="absolute right-5 top-1/2 -translate-y-1/2 bg-brandNavyDark/80 hover:bg-brandOrange p-3 rounded-full text-white transition z-20 border border-white/10">
-          <i data-lucide="chevron-right" class="w-5 h-5"></i>
-        </button>
-      </section>
-
-      <!-- STATS STRIP -->
-      <section class="bg-white py-8 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div><h4 class="text-3xl font-extrabold text-brandNavy">3,000+</h4><p class="text-xs text-slate-500 font-bold uppercase mt-1">Hampers Dispatched</p></div>
-          <div><h4 class="text-3xl font-extrabold text-brandNavy">1,400+</h4><p class="text-xs text-slate-500 font-bold uppercase mt-1">Corporate Clients</p></div>
-          <div><h4 class="text-3xl font-extrabold text-brandNavy">72 Hours</h4><p class="text-xs text-slate-500 font-bold uppercase mt-1">Prototype Delivery</p></div>
-          <div><h4 class="text-3xl font-extrabold text-brandNavy">100%</h4><p class="text-xs text-slate-500 font-bold uppercase mt-1">GST & Tax Compliant</p></div>
-        </div>
-      </section>
-
-      <!-- FEATURED CATEGORIES PREVIEW -->
-      <section class="py-16 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
-            <div>
-              <span class="text-brandOrange font-bold text-xs uppercase tracking-wider">Premium Collections</span>
-              <h2 class="text-3xl font-extrabold text-brandNavy mt-1">Signature Gift Suites</h2>
-            </div>
-            <button onclick="switchPage('catalog')" class="text-brandNavy font-bold hover:text-brandOrange text-sm flex items-center gap-1.5 mt-2 md:mt-0 transition">
-              View All 150+ Products <i data-lucide="arrow-right" class="w-4 h-4 text-brandOrange"></i>
-            </button>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition group">
-              <div class="h-60 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=700&q=80" alt="Welcome Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              </div>
-              <div class="p-6">
-                <span class="text-xs font-bold text-brandOrange uppercase">HR & Hiring</span>
-                <h3 class="text-xl font-bold text-brandNavy mt-1">The Prestige Onboarding Box</h3>
-                <p class="text-xs text-slate-600 mt-2">Hardcover embossed diary, laser engraved steel flask, metallic roller pen, and ceramic coffee mug.</p>
-                <div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-100">
-                  <span class="text-sm font-extrabold text-brandNavy">Starts ₹849 / Box</span>
-                  <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white px-4 py-2 rounded-lg font-bold transition">Inquire</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition group">
-              <div class="h-60 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=700&q=80" alt="Festive Box" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              </div>
-              <div class="p-6">
-                <span class="text-xs font-bold text-brandOrange uppercase">Diwali & Holidays</span>
-                <h3 class="text-xl font-bold text-brandNavy mt-1">Royal Festive Gourmet Chest</h3>
-                <p class="text-xs text-slate-600 mt-2">Assorted premium dry fruits, artisanal chocolate truffles, hand-poured soy wax candles, and gold foiled cards.</p>
-                <div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-100">
-                  <span class="text-sm font-extrabold text-brandNavy">Starts ₹1,399 / Box</span>
-                  <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white px-4 py-2 rounded-lg font-bold transition">Inquire</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition group">
-              <div class="h-60 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=700&q=80" alt="Tech Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              </div>
-              <div class="p-6">
-                <span class="text-xs font-bold text-brandOrange uppercase">Executive Swag</span>
-                <h3 class="text-xl font-bold text-brandNavy mt-1">Tech Titan Wireless Ensemble</h3>
-                <p class="text-xs text-slate-600 mt-2">10,000mAh magnetic fast charger, wireless ANC earbuds, braided 3-in-1 cable, and vegan leather desk mat.</p>
-                <div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-100">
-                  <span class="text-sm font-extrabold text-brandNavy">Starts ₹2,199 / Box</span>
-                  <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white px-4 py-2 rounded-lg font-bold transition">Inquire</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS SECTION -->
-      <section class="py-16 bg-white border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="text-brandOrange font-bold text-xs uppercase tracking-wider">Enterprise Trust</span>
-            <h2 class="text-3xl font-extrabold text-brandNavy mt-1">What HR & Procurement Leaders Say</h2>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <div class="flex text-brandOrange mb-3"><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i></div>
-              <p class="text-slate-700 text-sm italic">"Giftxindia fulfilled our 1,400 Diwali hampers across 22 states with zero breakages. The laser-etched packaging was stunning!"</p>
-              <div class="mt-6 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-brandNavy text-brandOrange font-bold flex items-center justify-center text-xs">SK</div>
-                <div><h4 class="font-bold text-brandNavy text-sm">Sunil Kulkarni</h4><p class="text-xs text-slate-500">VP HR, Tech Global</p></div>
-              </div>
-            </div>
-
-            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <div class="flex text-brandOrange mb-3"><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i></div>
-              <p class="text-slate-700 text-sm italic">"Our new joinees constantly post their welcome kits on LinkedIn. The precision tie-logo detail elevates our employer branding."</p>
-              <div class="mt-6 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-brandNavy text-brandOrange font-bold flex items-center justify-center text-xs">PR</div>
-                <div><h4 class="font-bold text-brandNavy text-sm">Priyanka Rao</h4><p class="text-xs text-slate-500">Talent Acquisition Lead</p></div>
-              </div>
-            </div>
-
-            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <div class="flex text-brandOrange mb-3"><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i><i data-lucide="star" class="w-4 h-4 fill-brandOrange"></i></div>
-              <p class="text-slate-700 text-sm italic">"Physical sample delivered to our Bangalore headquarters in 48 hours. Transparent GST billing made approvals effortless."</p>
-              <div class="mt-6 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-brandNavy text-brandOrange font-bold flex items-center justify-center text-xs">AM</div>
-                <div><h4 class="font-bold text-brandNavy text-sm">Amit Mathur</h4><p class="text-xs text-slate-500">Procurement Manager</p></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SOCIAL MEDIA COMMUNITY -->
-      <section class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center max-w-xl mx-auto mb-10">
-            <span class="text-brandOrange font-bold text-xs uppercase tracking-wider">Join The Movement</span>
-            <h2 class="text-3xl font-extrabold text-brandNavy mt-1">#UnboxGiftxindia</h2>
-          </div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="relative group rounded-xl overflow-hidden aspect-square">
-              <img src="https://images.unsplash.com/photo-1605641987825-c1664626d79f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Unbox" class="w-full h-full object-cover group-hover:scale-105 transition" />
-              <div class="absolute inset-0 bg-brandNavy/70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white font-bold text-xs gap-1.5 transition">
-                <i data-lucide="heart" class="w-4 h-4 text-brandOrange fill-brandOrange"></i> 480 Likes
-              </div>
-            </div>
-            <div class="relative group rounded-xl overflow-hidden aspect-square">
-              <img src="http://plus.unsplash.com/premium_photo-1698500035049-d69331f7cd2a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laser Flask" class="w-full h-full object-cover group-hover:scale-105 transition" />
-              <div class="absolute inset-0 bg-brandNavy/70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white font-bold text-xs gap-1.5 transition">
-                <i data-lucide="heart" class="w-4 h-4 text-brandOrange fill-brandOrange"></i> 912 Likes
-              </div>
-            </div>
-            <div class="relative group rounded-xl overflow-hidden aspect-square">
-              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Festive Box" class="w-full h-full object-cover group-hover:scale-105 transition" />
-              <div class="absolute inset-0 bg-brandNavy/70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white font-bold text-xs gap-1.5 transition">
-                <i data-lucide="heart" class="w-4 h-4 text-brandOrange fill-brandOrange"></i> 620 Likes
-              </div>
-            </div>
-            <div class="relative group rounded-xl overflow-hidden aspect-square">
-              <img src="https://images.unsplash.com/photo-1660033572241-4943ab055dd3?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Swag Set" class="w-full h-full object-cover group-hover:scale-105 transition" />
-              <div class="absolute inset-0 bg-brandNavy/70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white font-bold text-xs gap-1.5 transition">
-                <i data-lucide="heart" class="w-4 h-4 text-brandOrange fill-brandOrange"></i> 1.4k Likes
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ==================== 2. CATALOG VIEW ==================== -->
-    <div id="view-catalog" class="page-view">
-      <div class="bg-brandNavy text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-extrabold">Executive Catalog & Gifting Suites</h1>
-        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Select pre-designed hampers or mix-and-match items with full logo personalization.</p>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Catalog Item 1 -->
-          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" class="h-48 w-full object-cover" alt="Welcome Set" />
-            <div class="p-6">
-              <span class="text-xs font-bold text-brandOrange uppercase">Onboarding</span>
-              <h3 class="font-bold text-lg text-brandNavy mt-1">Founder's Welcome Pack</h3>
-              <p class="text-xs text-slate-600 mt-2">Custom-printed diary, metal pen, temperature flask, USB key, and hardboard box.</p>
-              <div class="mt-4 flex justify-between items-center pt-4 border-t border-slate-100">
-                <span class="font-bold text-brandNavy text-sm">₹849 / kit</span>
-                <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white font-bold px-3.5 py-1.5 rounded transition">Request Sample</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Catalog Item 2 -->
-          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
-            <img src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=600&q=80" class="h-48 w-full object-cover" alt="Diwali Gourmet" />
-            <div class="p-6">
-              <span class="text-xs font-bold text-brandOrange uppercase">Festive Seasons</span>
-              <h3 class="font-bold text-lg text-brandNavy mt-1">Grand Royale Festive Chest</h3>
-              <p class="text-xs text-slate-600 mt-2">California almonds, roasted cashews, luxury aroma candle, and customized greeting card.</p>
-              <div class="mt-4 flex justify-between items-center pt-4 border-t border-slate-100">
-                <span class="font-bold text-brandNavy text-sm">₹1,399 / box</span>
-                <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white font-bold px-3.5 py-1.5 rounded transition">Request Sample</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Catalog Item 3 -->
-          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
-            <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=600&q=80" class="h-48 w-full object-cover" alt="Smart Gadgets" />
-            <div class="p-6">
-              <span class="text-xs font-bold text-brandOrange uppercase">Electronics</span>
-              <h3 class="font-bold text-lg text-brandNavy mt-1">Smart Mobility Desk Bundle</h3>
-              <p class="text-xs text-slate-600 mt-2">10,000mAh magnetic power bank, Bluetooth earbuds, and leatherette desk pad.</p>
-              <div class="mt-4 flex justify-between items-center pt-4 border-t border-slate-100">
-                <span class="font-bold text-brandNavy text-sm">₹2,199 / set</span>
-                <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white font-bold px-3.5 py-1.5 rounded transition">Request Sample</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Catalog Item 4 -->
-          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" class="h-48 w-full object-cover" alt="Sustainable" />
-            <div class="p-6">
-              <span class="text-xs font-bold text-brandOrange uppercase">Eco-Friendly</span>
-              <h3 class="font-bold text-lg text-brandNavy mt-1">Earth First Bamboo Suite</h3>
-              <p class="text-xs text-slate-600 mt-2">Bamboo vacuum flask, seed plantable notebook, organic jute bag, and cork coaster.</p>
-              <div class="mt-4 flex justify-between items-center pt-4 border-t border-slate-100">
-                <span class="font-bold text-brandNavy text-sm">₹699 / set</span>
-                <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white font-bold px-3.5 py-1.5 rounded transition">Request Sample</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Catalog Item 5 -->
-          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
-            <img src="https://plus.unsplash.com/premium_photo-1680788451776-5875a8e5ff57?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-48 w-full object-cover" alt="Executive Drinkware" />
-            <div class="p-6">
-              <span class="text-xs font-bold text-brandOrange uppercase">Drinkware</span>
-              <h3 class="font-bold text-lg text-brandNavy mt-1">Matte Thermal Flask Set</h3>
-              <p class="text-xs text-slate-600 mt-2">Dual stainless insulated flask with 3 cups in magnetic luxury presentation case.</p>
-              <div class="mt-4 flex justify-between items-center pt-4 border-t border-slate-100">
-                <span class="font-bold text-brandNavy text-sm">₹549 / set</span>
-                <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white font-bold px-3.5 py-1.5 rounded transition">Request Sample</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Catalog Item 6 -->
-          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
-            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" class="h-48 w-full object-cover" alt="VIP Box" />
-            <div class="p-6">
-              <span class="text-xs font-bold text-brandOrange uppercase">VIP Leadership</span>
-              <h3 class="font-bold text-lg text-brandNavy mt-1">C-Suite Black Gold Box</h3>
-              <p class="text-xs text-slate-600 mt-2">Gold-trimmed roller pen, leather briefcase portfolio, smart watch, and brass desk clock.</p>
-              <div class="mt-4 flex justify-between items-center pt-4 border-t border-slate-100">
-                <span class="font-bold text-brandNavy text-sm">₹4,499 / box</span>
-                <button onclick="switchPage('contact')" class="text-xs bg-brandNavy hover:bg-brandOrange text-white font-bold px-3.5 py-1.5 rounded transition">Request Sample</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== 3. BRANDING STUDIO VIEW ==================== -->
-    <div id="view-branding" class="page-view">
-      <div class="bg-brandNavy text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-extrabold">In-House Branding & Custom Finishing</h1>
-        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Precision technology reproducing your corporate identity with laser accuracy.</p>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-4">
-              <i data-lucide="zap" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-lg text-brandNavy">Fiber Laser Engraving</h3>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">Permanent, non-fade metallic etching on stainless steel bottles, copper ware, power banks, and metal pens.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-4">
-              <i data-lucide="printer" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-lg text-brandNavy">High-Resolution UV Print</h3>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">Vibrant, Pantone-accurate direct full-color printing for intricate brand gradients on desktop tech & ceramics.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-4">
-              <i data-lucide="stamp" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-lg text-brandNavy">Blind & Foil Debossing</h3>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">Deep mechanical heat stamping in matte gold, silver, or classic blind relief on luxury leather planners.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-4">
-              <i data-lucide="package" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-lg text-brandNavy">Bespoke Rigid Boxes</h3>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">Custom magnetic closure packaging featuring precision die-cut EVA velvet foam and branded ribbon ties.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== 4. HOW IT WORKS VIEW ==================== -->
-    <div id="view-process" class="page-view">
-      <div class="bg-brandNavy text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-extrabold">Seamless 4-Step Gifting Workflow</h1>
-        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">We take care of curation, personalization, and multi-location doorstep delivery.</p>
-      </div>
-
-      <div class="max-w-4xl mx-auto px-4 py-16 space-y-6">
-        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brandNavy text-brandOrange font-extrabold flex items-center justify-center shrink-0 text-lg">01</div>
-          <div>
-            <h3 class="font-bold text-lg text-brandNavy">Curate & Request Digital Mockups</h3>
-            <p class="text-xs text-slate-600 mt-1 leading-relaxed">Select pre-built suites or assemble a custom mix. Our design team renders high-definition 3D digital mockups with your logo within 4 hours.</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brandNavy text-brandOrange font-extrabold flex items-center justify-center shrink-0 text-lg">02</div>
-          <div>
-            <h3 class="font-bold text-lg text-brandNavy">Physical Prototype Sample Approval</h3>
-            <p class="text-xs text-slate-600 mt-1 leading-relaxed">We courier a fully branded prototype box directly to your office within 48 hours for physical quality verification.</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brandNavy text-brandOrange font-extrabold flex items-center justify-center shrink-0 text-lg">03</div>
-          <div>
-            <h3 class="font-bold text-lg text-brandNavy">Precision Bulk Production & QC</h3>
-            <p class="text-xs text-slate-600 mt-1 leading-relaxed">Every item goes through individual laser branding, assembly, cushioning, and strict zero-defect quality control checks.</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brandNavy text-brandOrange font-extrabold flex items-center justify-center shrink-0 text-lg">04</div>
-          <div>
-            <h3 class="font-bold text-lg text-brandNavy">Multi-Address Doorstep Logistics</h3>
-            <p class="text-xs text-slate-600 mt-1 leading-relaxed">Upload a spreadsheet of recipient addresses. We dispatch to 10 or 10,000+ homes across India with automated SMS tracking links.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== 5. PRICING VIEW ==================== -->
-    <div id="view-pricing" class="page-view">
-      <div class="bg-brandNavy text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-extrabold">Interactive Bulk Price Estimator</h1>
-        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Volume tiers tailored for enterprises, startups, and agencies.</p>
-      </div>
-
-      <div class="max-w-4xl mx-auto px-4 py-16">
-        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div>
-              <label class="block text-xs font-bold uppercase text-brandNavy mb-2">Select Hamper Category</label>
-              <select id="price-tier" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm font-semibold">
-                <option value="699">Eco Green Essential Kit (₹699 / box)</option>
-                <option value="849" selected>Prestige Executive Welcome Kit (₹849 / box)</option>
-                <option value="1399">Royal Festive Gourmet Chest (₹1,399 / box)</option>
-                <option value="2199">Tech Titan Wireless Swag (₹2,199 / box)</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-brandNavy mb-2">Order Quantity</label>
-              <select id="price-qty" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm font-semibold">
-                <option value="50">50 Units (Standard Base Price)</option>
-                <option value="150" selected>150 Units (5% Bulk Discount)</option>
-                <option value="500">500 Units (12% Volume Discount)</option>
-                <option value="1000">1,000+ Units (20% Enterprise VIP Discount)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="bg-brandNavy text-white p-6 rounded-2xl text-center">
-            <span class="text-xs uppercase font-extrabold tracking-widest text-brandOrange">Estimated Order Value</span>
-            <div id="price-total" class="text-4xl font-extrabold text-white mt-2">₹1,20,982</div>
-            <p class="text-xs text-slate-400 mt-2">*Excluding 18% GST and individual multi-address courier logistics.</p>
-          </div>
-
-          <button onclick="switchPage('contact')" class="w-full mt-6 bg-brandOrange hover:bg-brandOrangeHover text-white font-bold py-3.5 rounded-xl transition text-sm">
-            Lock In This Pricing & Request Samples
+        <!-- Mobile Menu Trigger -->
+        <div class="lg:hidden flex items-center space-x-2">
+          <a href="#quote-section" class="px-3 py-1.5 rounded-md bg-brand-orange text-white text-xs font-bold">
+            Quote
+          </a>
+          <button id="mobile-menu-btn" class="p-2 text-slate-700" aria-label="Toggle Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- ==================== 6. ABOUT US VIEW ==================== -->
-    <div id="view-about" class="page-view">
-      <div class="bg-brandNavy text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-extrabold">About Giftxindia</h1>
-        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Corporate Gifts, Lasting Impressions.</p>
-      </div>
-
-      <div class="max-w-4xl mx-auto px-4 py-16 space-y-8 text-slate-700 text-sm leading-relaxed">
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <h2 class="text-2xl font-bold text-brandNavy mb-4">Our Mission</h2>
-          <p>At <strong>Giftxindia</strong>, we believe every corporate gift is a tangible representation of your brand's ethos. We bridge the gap between standard promotional products and bespoke luxury gifting by engineering hampers that employees, clients, and partners cherish.</p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div class="p-5 bg-brandOrangeLight/50 rounded-xl border border-brandOrange/20">
-              <h4 class="font-bold text-brandNavy flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brandOrange"></i> Enterprise Compliance</h4>
-              <p class="text-xs text-slate-600 mt-2">Registered GST vendor with formal vendor onboarding capabilities, corporate invoicing, and strict NDAs for unreleased branding.</p>
-            </div>
-            <div class="p-5 bg-brandOrangeLight/50 rounded-xl border border-brandOrange/20">
-              <h4 class="font-bold text-brandNavy flex items-center gap-2"><i data-lucide="truck" class="w-5 h-5 text-brandOrange"></i> Nationwide Delivery Network</h4>
-              <p class="text-xs text-slate-600 mt-2">Direct integrations with leading express courier networks covering 19,000+ PIN codes across India and overseas hubs.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="hidden lg:hidden border-t border-brand-border bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#categories" class="mobile-nav-link block py-2 text-sm font-medium text-slate-700">Categories</a>
+      <a href="#products" class="mobile-nav-link block py-2 text-sm font-medium text-slate-700">Bestsellers</a>
+      <a href="#solutions" class="mobile-nav-link block py-2 text-sm font-medium text-slate-700">Solutions</a>
+      <a href="#customization" class="mobile-nav-link block py-2 text-sm font-medium text-slate-700">Custom Branding</a>
+      <a href="#process" class="mobile-nav-link block py-2 text-sm font-medium text-slate-700">How It Works</a>
+      <a href="#faq" class="mobile-nav-link block py-2 text-sm font-medium text-slate-700">FAQs</a>
+      <a href="#quote-section" class="mobile-nav-link block w-full text-center py-2.5 bg-brand-navy text-white text-sm font-bold rounded-md">
+        Request Corporate Quotation
+      </a>
     </div>
+  </header>
 
-    <!-- ==================== 7. FAQ VIEW ==================== -->
-    <div id="view-faq" class="page-view">
-      <div class="bg-brandNavy text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-extrabold">Frequently Asked Questions</h1>
-        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Everything you need to know about corporate ordering with Giftxindia.</p>
-      </div>
-
-      <div class="max-w-3xl mx-auto px-4 py-16 space-y-4">
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-brandNavy text-base">What is the Minimum Order Quantity (MOQ)?</h3>
-          <p class="text-xs text-slate-600 mt-2">Our MOQ for standard pre-curated collections with logo customization is 25 units. For completely custom-molded boxes, the MOQ is 50 units.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-brandNavy text-base">Can you ship directly to individual employee home addresses?</h3>
-          <p class="text-xs text-slate-600 mt-2">Yes. You provide an encrypted Excel file with recipient addresses and phone numbers. We manage individual dispatches and provide tracking dashboards.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-brandNavy text-base">How fast can I get a physical sample?</h3>
-          <p class="text-xs text-slate-600 mt-2">Digital mockups are sent within 4 hours. Once approved, physical samples are dispatched via express courier and reach major Indian metros in 48-72 hours.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-brandNavy text-base">Are GST invoices provided for corporate tax claims?</h3>
-          <p class="text-xs text-slate-600 mt-2">Yes, 100% of our orders include formal GST invoices with your company's GSTIN and state code for standard input tax credits.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== 8. CONTACT & RFP VIEW ==================== -->
-    <div id="view-contact" class="page-view">
-      <div class="bg-brandNavy text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-extrabold">Connect With Our Corporate Concierge</h1>
-        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Get an itemized proposal and digital mockups for your company in 4 hours.</p>
-      </div>
-
-      <div class="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+  <!-- Hero Section with 5-Image Carousel -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-brand-surface via-white to-white py-14 lg:py-20 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Contact Cards -->
-        <div class="space-y-4">
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <div class="w-10 h-10 rounded-lg bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-3">
-              <i data-lucide="phone" class="w-5 h-5"></i>
-            </div>
-            <h4 class="font-bold text-brandNavy text-sm">Direct Hotline & WhatsApp</h4>
-            <p class="text-xs text-slate-600 mt-1">+91 94517 20757</p>
-            <a href="tel:+919451720757" class="inline-block mt-3 text-xs font-bold text-brandOrange hover:underline">Call Directly →</a>
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-brand-navy text-xs font-semibold">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-orange"></i>
+            Pan India Corporate Gifting Partner
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-navy tracking-tight leading-[1.12]">
+            Premium Corporate Gifting, <span class="text-brand-orange">Made Remarkable.</span>
+          </h1>
+          
+          <p class="text-base sm:text-lg text-brand-muted max-w-2xl leading-relaxed">
+            Thoughtfully curated corporate gifts, customised merchandise and premium hampers that help businesses build stronger relationships with employees, clients and partners.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+            <a href="#quote-section" class="inline-flex justify-center items-center px-7 py-3.5 text-sm font-bold text-white bg-brand-orange hover:bg-brand-orange-hover rounded-md shadow-md transition-all">
+              Get a Corporate Quote
+            </a>
+            <a href="#products" class="inline-flex justify-center items-center px-7 py-3.5 text-sm font-bold text-brand-navy bg-white border border-brand-border hover:bg-brand-surface rounded-md transition-all">
+              Explore Products
+            </a>
           </div>
 
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <div class="w-10 h-10 rounded-lg bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-3">
-              <i data-lucide="mail" class="w-5 h-5"></i>
+          <!-- Micro Trust Elements -->
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-border">
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0"></i>
+              <span>1000+ Orders</span>
             </div>
-            <h4 class="font-bold text-brandNavy text-sm">Official Email</h4>
-            <p class="text-xs text-slate-600 mt-1">info.giftxindia@gmail.com</p>
-            <a href="mailto:info.giftxindia@gmail.com" class="inline-block mt-3 text-xs font-bold text-brandOrange hover:underline">Send Email →</a>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <div class="w-10 h-10 rounded-lg bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-3">
-              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0"></i>
+              <span>Pan India Delivery</span>
             </div>
-            <h4 class="font-bold text-brandNavy text-sm">Address</h4>
-            <p class="text-xs text-slate-600 mt-1">Pan-India Warehouses & Logistics Support</p>
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0"></i>
+              <span>Custom Branding</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0"></i>
+              <span>Bulk Pricing</span>
+            </div>
           </div>
         </div>
 
-        <!-- RFP Form -->
-        <div class="lg:col-span-2 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-lg">
-          <h3 class="text-2xl font-bold text-brandNavy mb-1">Request a Bulk Quote & Free Sample</h3>
-          <p class="text-xs text-slate-500 mb-6">Fill in your specifications and an account manager will call you within 4 hours.</p>
+        <!-- 5-Image Hero Slider -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-border bg-white p-3 group">
+            
+            <div class="relative h-[400px] w-full overflow-hidden rounded-xl bg-slate-100">
+              <!-- Slide 1: Executive Hamper -->
+              <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700">
+                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=85" alt="Luxury Corporate Gift Box" class="w-full h-full object-cover" />
+                <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/90 backdrop-blur-md text-white p-3.5 rounded-lg border border-white/10">
+                  <p class="text-[11px] uppercase tracking-wider text-brand-orange font-bold">Featured Collection 01/05</p>
+                  <p class="text-sm font-semibold mt-0.5">Executive Onboarding & Welcome Hamper</p>
+                </div>
+              </div>
 
-          <form onsubmit="handleFormSubmit(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-            <div>
-              <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Company Name *</label>
-              <input type="text" required placeholder="e.g. Tata / Infosys" class="w-full border border-slate-300 rounded-lg p-2.5 text-xs focus:outline-none focus:border-brandOrange" />
+              <!-- Slide 2: Tech Gadgets -->
+              <div class="hero-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-700">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=85" alt="Tech Gifting Accessories" class="w-full h-full object-cover" />
+                <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/90 backdrop-blur-md text-white p-3.5 rounded-lg border border-white/10">
+                  <p class="text-[11px] uppercase tracking-wider text-brand-orange font-bold">Featured Collection 02/05</p>
+                  <p class="text-sm font-semibold mt-0.5">Smart Wireless Audio & Lifestyle Tech</p>
+                </div>
+              </div>
+
+              <!-- Slide 3: Leather Executive Sets -->
+              <div class="hero-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-700">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=85" alt="Leather Desk Sets" class="w-full h-full object-cover" />
+                <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/90 backdrop-blur-md text-white p-3.5 rounded-lg border border-white/10">
+                  <p class="text-[11px] uppercase tracking-wider text-brand-orange font-bold">Featured Collection 03/05</p>
+                  <p class="text-sm font-semibold mt-0.5">Handcrafted Leather Diaries & Metal Pens</p>
+                </div>
+              </div>
+
+              <!-- Slide 4: Festive Luxury Hamper -->
+              <div class="hero-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-700">
+                <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1000&q=85" alt="Diwali Gourmet Box" class="w-full h-full object-cover" />
+                <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/90 backdrop-blur-md text-white p-3.5 rounded-lg border border-white/10">
+                  <p class="text-[11px] uppercase tracking-wider text-brand-orange font-bold">Featured Collection 04/05</p>
+                  <p class="text-sm font-semibold mt-0.5">Royal Heritage Dry Fruits & Gourmet Box</p>
+                </div>
+              </div>
+
+              <!-- Slide 5: Corporate Awards & Trophies -->
+              <div class="hero-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-700">
+                <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&w=1000&q=85" alt="Crystal Awards" class="w-full h-full object-cover" />
+                <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/90 backdrop-blur-md text-white p-3.5 rounded-lg border border-white/10">
+                  <p class="text-[11px] uppercase tracking-wider text-brand-orange font-bold">Featured Collection 05/05</p>
+                  <p class="text-sm font-semibold mt-0.5">Precision Laser-Etched Optic Crystal Awards</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Contact Person Name *</label>
-              <input type="text" required placeholder="Full Name" class="w-full border border-slate-300 rounded-lg p-2.5 text-xs focus:outline-none focus:border-brandOrange" />
+
+            <!-- Carousel Controls -->
+            <button onclick="changeHeroSlide(-1)" class="absolute left-6 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 hover:bg-white text-brand-navy shadow-md transition-all opacity-80 hover:opacity-100 z-10" aria-label="Previous Slide">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <button onclick="changeHeroSlide(1)" class="absolute right-6 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 hover:bg-white text-brand-navy shadow-md transition-all opacity-80 hover:opacity-100 z-10" aria-label="Next Slide">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+
+            <!-- Slide Indicators -->
+            <div class="flex justify-center gap-1.5 mt-3" id="hero-indicators">
+              <button onclick="setHeroSlide(0)" class="w-6 h-1.5 rounded-full bg-brand-orange transition-all duration-300" aria-label="Slide 1"></button>
+              <button onclick="setHeroSlide(1)" class="w-2 h-1.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300" aria-label="Slide 2"></button>
+              <button onclick="setHeroSlide(2)" class="w-2 h-1.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300" aria-label="Slide 3"></button>
+              <button onclick="setHeroSlide(3)" class="w-2 h-1.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300" aria-label="Slide 4"></button>
+              <button onclick="setHeroSlide(4)" class="w-2 h-1.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300" aria-label="Slide 5"></button>
             </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Official Work Email *</label>
-              <input type="email" required placeholder="name@company.com" class="w-full border border-slate-300 rounded-lg p-2.5 text-xs focus:outline-none focus:border-brandOrange" />
-            </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-slate-700 mb-1">WhatsApp / Phone *</label>
-              <input type="tel" required placeholder="+91 94517 20757" class="w-full border border-slate-300 rounded-lg p-2.5 text-xs focus:outline-none focus:border-brandOrange" />
-            </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Estimated Quantity</label>
-              <select class="w-full border border-slate-300 rounded-lg p-2.5 text-xs focus:outline-none focus:border-brandOrange">
-                <option>25 - 50 Boxes</option>
-                <option>50 - 200 Boxes</option>
-                <option>200 - 1,000 Boxes</option>
-                <option>1,000+ Enterprise Tier</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Budget Per Box</label>
-              <select class="w-full border border-slate-300 rounded-lg p-2.5 text-xs focus:outline-none focus:border-brandOrange">
-                <option>₹500 - ₹1,000</option>
-                <option>₹1,000 - ₹2,500</option>
-                <option>₹2,500 - ₹5,000</option>
-                <option>₹5,000+ Luxury Executive</option>
-              </select>
-            </div>
-            <div class="sm:col-span-2">
-              <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Event / Branding Details</label>
-              <textarea rows="3" placeholder="Tell us about the occasion (New Hires, Festive, Annual Day, etc.)" class="w-full border border-slate-300 rounded-lg p-2.5 text-xs focus:outline-none focus:border-brandOrange"></textarea>
-            </div>
-            <div class="sm:col-span-2">
-              <button type="submit" class="w-full bg-brandOrange hover:bg-brandOrangeHover text-white font-bold py-3.5 rounded-lg text-sm shadow-md transition">
-                Submit Request to Giftxindia Concierge
-              </button>
-            </div>
-          </form>
+
+          </div>
         </div>
 
       </div>
     </div>
 
-  </main>
+    <!-- Trust Bar Metrics -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-white border border-brand-border p-5 rounded-xl shadow-sm flex items-center space-x-4">
+          <div class="p-3 bg-blue-50 rounded-lg text-brand-navy shrink-0">
+            <i data-lucide="building-2" class="w-6 h-6 text-brand-orange"></i>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-brand-navy">1000+</div>
+            <div class="text-xs font-medium text-brand-muted uppercase tracking-wider">Corporate Orders</div>
+          </div>
+        </div>
 
-  <!-- FLOATING WHATSAPP CTA -->
-  <a href="https://wa.me/919451720757?text=Hello%20Giftxindia,%20I%20want%20to%20request%20a%20corporate%20gifting%20catalog%20and%20quotation." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1EBE5D] text-white p-4 rounded-full shadow-2xl flex items-center justify-center z-50 transition transform hover:scale-110">
-    <i data-lucide="message-circle" class="w-6 h-6"></i>
-  </a>
+        <div class="bg-white border border-brand-border p-5 rounded-xl shadow-sm flex items-center space-x-4">
+          <div class="p-3 bg-blue-50 rounded-lg text-brand-navy shrink-0">
+            <i data-lucide="sparkles" class="w-6 h-6 text-brand-orange"></i>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-brand-navy">500+</div>
+            <div class="text-xs font-medium text-brand-muted uppercase tracking-wider">Products</div>
+          </div>
+        </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-brandNavyDark text-slate-400 py-12 border-t border-brandNavy text-xs">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <div class="bg-white border border-brand-border p-5 rounded-xl shadow-sm flex items-center space-x-4">
+          <div class="p-3 bg-blue-50 rounded-lg text-brand-navy shrink-0">
+            <i data-lucide="truck" class="w-6 h-6 text-brand-orange"></i>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-brand-navy">Pan India</div>
+            <div class="text-xs font-medium text-brand-muted uppercase tracking-wider">Delivery</div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-brand-border p-5 rounded-xl shadow-sm flex items-center space-x-4">
+          <div class="p-3 bg-blue-50 rounded-lg text-brand-navy shrink-0">
+            <i data-lucide="shield-check" class="w-6 h-6 text-brand-orange"></i>
+          </div>
+          <div>
+            <div class="text-2xl font-black text-brand-navy">Custom</div>
+            <div class="text-xs font-medium text-brand-muted uppercase tracking-wider">Branding</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Curated Portfolios</span>
+        <h2 class="text-3xl font-extrabold text-brand-navy mt-1">Explore Our Corporate Gifting Categories</h2>
+      </div>
+      <p class="text-brand-muted text-sm max-w-md mt-2 md:mt-0">
+        Everything you need to create memorable corporate gifting experiences.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      <!-- Col 1 -->
-      <div class="space-y-3">
-        <div class="flex items-center gap-2 text-white font-black text-xl">
-          gift<span class="text-brandOrange">x</span>india
+      <div onclick="filterProducts('executive')" class="group cursor-pointer rounded-xl border border-brand-border overflow-hidden bg-white hover:shadow-lg transition-all">
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Executive Gifts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute top-3 right-3 bg-brand-navy/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-semibold text-white">40+ Items</div>
         </div>
-        <p class="text-slate-400 text-xs">Corporate Gifts, Lasting Impressions. Curated with precision for enterprises across India.</p>
+        <div class="p-5">
+          <h3 class="text-base font-bold text-brand-navy group-hover:text-brand-orange transition-colors">Executive Gifts</h3>
+          <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">High-end leadership desk accessories, luxury pens, and leather organizers.</p>
+          <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-navy">
+            <span>Explore Category</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
       </div>
 
-      <!-- Col 2 -->
+      <div onclick="filterProducts('employee')" class="group cursor-pointer rounded-xl border border-brand-border overflow-hidden bg-white hover:shadow-lg transition-all">
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" alt="Employee Gifts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute top-3 right-3 bg-brand-navy/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-semibold text-white">30+ Items</div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-base font-bold text-brand-navy group-hover:text-brand-orange transition-colors">Employee Gifts & Welcome Kits</h3>
+          <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">Bespoke onboarding sets with apparel, drinkware, and tech accessories.</p>
+          <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-navy">
+            <span>Explore Category</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+      </div>
+
+      <div onclick="filterProducts('festive')" class="group cursor-pointer rounded-xl border border-brand-border overflow-hidden bg-white hover:shadow-lg transition-all">
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=800&q=80" alt="Festive Hampers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute top-3 right-3 bg-brand-navy/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-semibold text-white">50+ Items</div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-base font-bold text-brand-navy group-hover:text-brand-orange transition-colors">Festive Hampers</h3>
+          <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">Diwali, New Year, and seasonal gourmet treats, dry fruits, and luxury boxes.</p>
+          <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-navy">
+            <span>Explore Category</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+      </div>
+
+      <div onclick="filterProducts('tech')" class="group cursor-pointer rounded-xl border border-brand-border overflow-hidden bg-white hover:shadow-lg transition-all">
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Tech Gifts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute top-3 right-3 bg-brand-navy/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-semibold text-white">65+ Items</div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-base font-bold text-brand-navy group-hover:text-brand-orange transition-colors">Tech & Lifestyle Gifts</h3>
+          <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">Smart power banks, wireless chargers, Bluetooth audio, and accessories.</p>
+          <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-navy">
+            <span>Explore Category</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+      </div>
+
+      <div onclick="filterProducts('awards')" class="group cursor-pointer rounded-xl border border-brand-border overflow-hidden bg-white hover:shadow-lg transition-all">
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&w=800&q=80" alt="Awards & Trophies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute top-3 right-3 bg-brand-navy/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-semibold text-white">25+ Items</div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-base font-bold text-brand-navy group-hover:text-brand-orange transition-colors">Awards & Trophies</h3>
+          <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">Laser-engraved crystal, acrylic, and brass recognition awards.</p>
+          <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-navy">
+            <span>Explore Category</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+      </div>
+
+      <div onclick="filterProducts('promotional')" class="group cursor-pointer rounded-xl border border-brand-border overflow-hidden bg-white hover:shadow-lg transition-all">
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80" alt="Promotional Products" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute top-3 right-3 bg-brand-navy/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-semibold text-white">100+ Items</div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-base font-bold text-brand-navy group-hover:text-brand-orange transition-colors">Promotional Merchandise</h3>
+          <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">High-recall bottles, pens, backpacks, and conference event products.</p>
+          <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-navy">
+            <span>Explore Category</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Products & Live Search Filter -->
+  <section id="products" class="py-16 bg-brand-surface border-y border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">B2B Procurement Ready</span>
+        <h2 class="text-3xl font-extrabold text-brand-navy mt-1">Corporate Gifting Bestsellers</h2>
+        <p class="text-xs sm:text-sm text-brand-muted mt-2">
+          Request bulk pricing, customized logo mockups, and evaluation samples.
+        </p>
+      </div>
+
+      <!-- Filter Tabs & Search Bar -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+        <div class="flex flex-wrap gap-1.5 bg-white p-1 rounded-lg border border-brand-border shadow-sm" id="category-tabs">
+          <button onclick="filterProducts('all')" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-navy text-white" data-cat="all">All Items</button>
+          <button onclick="filterProducts('executive')" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:bg-slate-100" data-cat="executive">Executive</button>
+          <button onclick="filterProducts('employee')" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:bg-slate-100" data-cat="employee">Employee Kits</button>
+          <button onclick="filterProducts('festive')" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:bg-slate-100" data-cat="festive">Festive Hampers</button>
+          <button onclick="filterProducts('tech')" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:bg-slate-100" data-cat="tech">Tech Gifts</button>
+          <button onclick="filterProducts('awards')" class="tab-btn px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:bg-slate-100" data-cat="awards">Awards</button>
+        </div>
+
+        <div class="relative w-full md:w-72">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Search corporate gifts, bottles, pens..." class="w-full pl-9 pr-4 py-2 bg-white rounded-lg border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-grid">
+        
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="executive" data-name="Signature Executive Leather Gift Set" data-desc="leather notebook cardholder metal pen">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Executive Set" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Bestseller</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Executive Gifts</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">Signature Executive Leather Gift Set</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Genuine leather notebook, matching cardholder, and matte metal rollerball pen.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Laser Engraving</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Debossing</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('Signature Executive Leather Gift Set', 'Executive Gifts')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="promotional" data-name="Nordic Double-Walled Stainless Bottle" data-desc="insulated flask stainless steel bottle">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80" alt="Stainless Bottle" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Trending</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Promotional Merchandise</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">Nordic Double-Walled Stainless Bottle (750ml)</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Food-grade 304 steel bottle keeping beverages hot/cold for 24 hours.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Screen Printing</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Laser Etch</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('Nordic Double-Walled Stainless Bottle', 'Promotional Merchandise')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="employee" data-name="Executive Onboarding Welcome Kit" data-desc="welcome kit t-shirt diary bottle joiners">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" alt="Welcome Kit" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Popular</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Employee Gifts</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">Executive Onboarding Welcome Kit</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Branded polo t-shirt, thermal mug, diary, metal pen, and welcome card.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Custom Packaging</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Embroidery</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('Executive Onboarding Welcome Kit', 'Employee Gifts')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="festive" data-name="Royal Heritage Dry Fruit & Nut Hamper" data-desc="dry fruits diwali hamper organic honey luxury box">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=800&q=80" alt="Festive Hamper" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Festive Choice</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Festive Hampers</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">Royal Heritage Dry Fruit & Nut Hamper</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Embossed box with roasted almonds, cashews, pistachios, and honey.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Branded Sleeve</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Custom Note</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('Royal Heritage Dry Fruit Hamper', 'Festive Hampers')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="tech" data-name="MagSafe 10,000mAh Wireless Powerbank" data-desc="powerbank wireless fast charging battery">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1609592426508-419b66f2a632?auto=format&fit=crop&w=800&q=80" alt="Power Bank" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Tech Pick</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Tech Gifts</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">MagSafe 10,000mAh Wireless Powerbank</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Ultra-slim wireless magnetic power bank with digital LED level indicator.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Full UV Print</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Logo LED Glow</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('MagSafe 10,000mAh Powerbank', 'Tech Gifts')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="awards" data-name="Crystal & Brass Star Achievement Trophy" data-desc="trophy crystal brass award memento">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&w=800&q=80" alt="Corporate Trophy" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Recognition</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Awards & Trophies</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">Crystal & Brass Star Achievement Trophy</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Optic crystal pillar atop a weighted brass base in a satin presentation box.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">3D Subsurface</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Brass Etching</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('Crystal & Brass Star Trophy', 'Awards & Trophies')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="executive" data-name="Dual-Tone Vegan Leather Desk Mat" data-desc="desk mat organizer wireless charger pad">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&w=800&q=80" alt="Desk Mat" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Executive</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Executive Gifts</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">Dual-Tone Vegan Leather Desk Mat</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Water-resistant executive desk pad with pen groove and magnetic cable clip.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Gold Foiling</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Blind Deboss</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('Vegan Leather Desk Mat', 'Executive Gifts')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-xl border border-brand-border overflow-hidden shadow-sm flex flex-col justify-between" data-category="tech" data-name="Handcrafted Walnut Bluetooth Speaker" data-desc="speaker wooden audio bluetooth speaker">
+          <div>
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80" alt="Wooden Speaker" class="w-full h-full object-cover" />
+              <span class="absolute top-2.5 left-2.5 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Audio</span>
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Tech Gifts</span>
+              <h3 class="text-sm font-bold text-brand-navy mt-0.5">Handcrafted Walnut Bluetooth Speaker</h3>
+              <p class="text-xs text-brand-muted mt-1 leading-relaxed">Natural wood acoustic chassis with custom brand etching and deep bass.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Wood Etching</span>
+                <span class="text-[9px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Custom Box</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0 mt-auto">
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] font-semibold text-brand-muted">Custom Branding</span>
+              <button onclick="requestProductQuote('Walnut Bluetooth Speaker', 'Tech Gifts')" class="px-3 py-1.5 bg-brand-navy hover:bg-brand-orange text-white text-xs font-bold rounded transition-colors">Request Quote</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose GIFTXINDIA -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-xl mx-auto mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Why Choose GIFTXINDIA</span>
+      <h2 class="text-3xl font-extrabold text-brand-navy mt-1">Why Businesses Choose GIFTXINDIA</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-all">
+        <i data-lucide="printer" class="w-6 h-6 text-brand-orange mb-4"></i>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Custom Branding</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Add your company logo and brand identity to your gifts with precision equipment.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-all">
+        <i data-lucide="layers" class="w-6 h-6 text-brand-orange mb-4"></i>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Bulk Orders</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Reliable solutions for small and large corporate requirements on strict deadlines.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-all">
+        <i data-lucide="truck" class="w-6 h-6 text-brand-orange mb-4"></i>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Pan India Delivery</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Efficient delivery support across major Indian cities and work-from-home locations.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-all">
+        <i data-lucide="award" class="w-6 h-6 text-brand-orange mb-4"></i>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Premium Quality</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Professionally sourced products strictly suitable for corporate executive gifting.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-all">
+        <i data-lucide="users" class="w-6 h-6 text-brand-orange mb-4"></i>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Dedicated Support</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Personal assistance from product selection to proofs, production, and final dispatch.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm hover:shadow-md transition-all">
+        <i data-lucide="file-check" class="w-6 h-6 text-brand-orange mb-4"></i>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Competitive Pricing</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Special corporate pricing for bulk requirements with GST invoices for input credit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions for Every Occasion -->
+  <section id="solutions" class="py-16 bg-brand-surface border-y border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Occasion Oriented</span>
+        <h2 class="text-3xl font-extrabold text-brand-navy mt-1">Corporate Gifting Solutions for Every Occasion</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-brand-navy">Employee Joining Kits</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">Create memorable first impressions for new employees with customized swag.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#quote-section" onclick="setFormCategory('Employee Joining Kits')" class="text-xs font-bold text-brand-orange hover:underline flex items-center gap-1">
+              Request Solution <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-brand-navy">Employee Recognition</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">Celebrate milestones and achievements with meaningful rewards and awards.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#quote-section" onclick="setFormCategory('Employee Recognition')" class="text-xs font-bold text-brand-orange hover:underline flex items-center gap-1">
+              Request Solution <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-brand-navy">Client & Partner Gifts</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">Strengthen business relationships with premium gifts and high-value accessories.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#quote-section" onclick="setFormCategory('Client & Partner Gifts')" class="text-xs font-bold text-brand-orange hover:underline flex items-center gap-1">
+              Request Solution <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-brand-navy">Festival Gifting</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">Diwali, New Year and seasonal corporate hampers curated with gourmet treats.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#quote-section" onclick="setFormCategory('Festival Gifting')" class="text-xs font-bold text-brand-orange hover:underline flex items-center gap-1">
+              Request Solution <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-brand-navy">Event & Conference Gifts</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">Branded merchandise, folders, and gadgets for conferences, seminars and summits.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#quote-section" onclick="setFormCategory('Event & Conference Gifts')" class="text-xs font-bold text-brand-orange hover:underline flex items-center gap-1">
+              Request Solution <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-brand-navy">Promotional Merchandise</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">Increase brand visibility with high-utility customized marketing giveaways.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100">
+            <a href="#quote-section" onclick="setFormCategory('Promotional Merchandise')" class="text-xs font-bold text-brand-orange hover:underline flex items-center gap-1">
+              Request Solution <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Navy Custom Branding Section -->
+  <section id="customization" class="py-16 bg-brand-navy text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Precision Customization</span>
+          <h2 class="text-3xl sm:text-4xl font-black tracking-tight leading-tight">
+            Put Your Brand on Every Gift.
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            From subtle logo engraving to complete custom packaging, we help businesses transform ordinary products into memorable branded experiences.
+          </p>
+          <div class="pt-2">
+            <a href="#quote-section" class="inline-flex items-center px-6 py-3 rounded-md bg-brand-orange hover:bg-brand-orange-hover text-white text-xs font-bold shadow-md transition-all">
+              Start Customisation
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div class="bg-brand-navy-light border border-slate-700/60 p-4 rounded-lg">
+            <h3 class="text-sm font-bold text-brand-orange">Laser Engraving</h3>
+            <p class="text-xs text-slate-300 mt-1">Precision metallic markings for metal pens, bottles, and desk accessories.</p>
+          </div>
+          <div class="bg-brand-navy-light border border-slate-700/60 p-4 rounded-lg">
+            <h3 class="text-sm font-bold text-brand-orange">UV & Screen Printing</h3>
+            <p class="text-xs text-slate-300 mt-1">High-definition full-color branding on tech power banks and promotional drinkware.</p>
+          </div>
+          <div class="bg-brand-navy-light border border-slate-700/60 p-4 rounded-lg">
+            <h3 class="text-sm font-bold text-brand-orange">Debossing & Foil Stamping</h3>
+            <p class="text-xs text-slate-300 mt-1">Sophisticated blind and metallic leaf impressions on leather notebooks and mats.</p>
+          </div>
+          <div class="bg-brand-navy-light border border-slate-700/60 p-4 rounded-lg">
+            <h3 class="text-sm font-bold text-brand-orange">Custom Packaging & Boxes</h3>
+            <p class="text-xs text-slate-300 mt-1">Bespoke luxury rigid boxes, die-cut foam inserts, and magnetic closures.</p>
+          </div>
+          <div class="bg-brand-navy-light border border-slate-700/60 p-4 rounded-lg">
+            <h3 class="text-sm font-bold text-brand-orange">Corporate Sleeves</h3>
+            <p class="text-xs text-slate-300 mt-1">Full-bleed pantone-matched branded outer wraps for luxury gift hampers.</p>
+          </div>
+          <div class="bg-brand-navy-light border border-slate-700/60 p-4 rounded-lg">
+            <h3 class="text-sm font-bold text-brand-orange">Custom Inserts & Notes</h3>
+            <p class="text-xs text-slate-300 mt-1">Personalized executive greeting cards and leadership welcome messages.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (4-Step Process) -->
+  <section id="process" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-xl mx-auto mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Execution Timeline</span>
+      <h2 class="text-3xl font-extrabold text-brand-navy mt-1">How It Works</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm">
+        <div class="text-3xl font-black text-brand-orange mb-2">01</div>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Tell Us Your Requirement</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Share your target quantity, budget brackets, and required delivery deadlines.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm">
+        <div class="text-3xl font-black text-brand-orange mb-2">02</div>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Choose Products & Customisation</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Select matching items and receive customized digital branding mockups.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm">
+        <div class="text-3xl font-black text-brand-orange mb-2">03</div>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">Approve Design & Quote</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Confirm the sample proof, finalize the formal GST invoice quote, and initiate batching.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm">
+        <div class="text-3xl font-black text-brand-orange mb-2">04</div>
+        <h3 class="text-base font-bold text-brand-navy mb-1.5">We Deliver Across India</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">Reliable logistics with real-time tracking to headquarters or remote home addresses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries We Serve -->
+  <section class="py-14 bg-brand-surface border-y border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-muted">Enterprise Sectors</span>
+        <h2 class="text-2xl font-extrabold text-brand-navy mt-1">Industries We Serve</h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Banking & Finance</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">IT & Technology</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Healthcare & Pharma</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Real Estate</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Education</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Hospitality</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Manufacturing</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Automotive</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Retail</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Startups</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Consulting</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-brand-border text-center shadow-xs">
+          <span class="text-xs font-bold text-slate-700">Government & PSU</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-xl mx-auto mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Client Testimonials</span>
+      <h2 class="text-3xl font-extrabold text-brand-navy mt-1">Trusted by Businesses Across India</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm flex flex-col justify-between">
+        <p class="text-xs text-brand-charcoal italic leading-relaxed">"GIFTXINDIA handled our annual employee welcome kits for 1,200 team members across 16 cities without a single transit defect. The packaging was immaculate."</p>
+        <div class="mt-6 pt-4 border-t border-slate-100">
+          <div class="text-sm font-bold text-brand-navy">Meera Deshmukh</div>
+          <div class="text-xs text-brand-muted">VP People Operations</div>
+          <div class="text-xs font-semibold text-brand-orange mt-0.5">Enterprise Cloud Software</div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm flex flex-col justify-between">
+        <p class="text-xs text-brand-charcoal italic leading-relaxed">"The executive leather hampers and laser-engraved drinkware for our Annual Leadership Conclave received immense appreciation from all our delegates."</p>
+        <div class="mt-6 pt-4 border-t border-slate-100">
+          <div class="text-sm font-bold text-brand-navy">Sunil Nair</div>
+          <div class="text-xs text-brand-muted">Head of Corporate Marketing</div>
+          <div class="text-xs font-semibold text-brand-orange mt-0.5">Capital Finance Group</div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-xl border border-brand-border bg-white shadow-sm flex flex-col justify-between">
+        <p class="text-xs text-brand-charcoal italic leading-relaxed">"Prompt turnaround on GST invoices, sample mockups delivered on time, and high-quality gourmet Diwali boxes that represented our brand with elegance."</p>
+        <div class="mt-6 pt-4 border-t border-slate-100">
+          <div class="text-sm font-bold text-brand-navy">Pooja Aggarwal</div>
+          <div class="text-xs text-brand-muted">Lead Procurement Specialist</div>
+          <div class="text-xs font-semibold text-brand-orange mt-0.5">National Infrastructure Ltd</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Quotation Engine (Lead Capture) -->
+  <section id="quote-section" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl shadow-xl border border-brand-border p-6 sm:p-10">
+      
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Instant Quotation</span>
+        <h2 class="text-3xl font-black text-brand-navy mt-1">Planning a Bulk Corporate Order?</h2>
+        <p class="text-xs sm:text-sm text-brand-muted mt-2">
+          Tell us your quantity, budget and branding requirements. Our team will recommend the right products and create a customised quotation for you.
+        </p>
+      </div>
+
+      <div id="quote-alert" class="hidden p-3 bg-amber-50 border border-amber-200 rounded-md text-xs text-amber-900 mb-4 flex items-center justify-between">
+        <span>Inquiring about: <strong id="selected-product-label"></strong></span>
+        <button type="button" onclick="clearSelectedProduct()" class="text-amber-700 font-bold hover:underline">Clear</button>
+      </div>
+
+      <div id="form-success-message" class="hidden text-center py-12 space-y-4">
+        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+          <i data-lucide="check-circle" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-brand-navy">Thank You!</h3>
+        <p class="text-brand-muted max-w-md mx-auto text-xs sm:text-sm leading-relaxed">
+          Thank you! Our corporate gifting specialist will contact you shortly with digital samples and quotation.
+        </p>
+        <button onclick="resetQuoteForm()" class="mt-2 px-6 py-2 bg-brand-navy text-white text-xs font-bold rounded-md">
+          Submit Another Request
+        </button>
+      </div>
+
+      <form id="quote-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <input type="hidden" id="form-product-name" value="" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Full Name *</label>
+            <input type="text" required placeholder="e.g. Vikramaditya Sen" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Company Name *</label>
+            <input type="text" required placeholder="e.g. Tata Consultancy Services" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Email *</label>
+            <input type="email" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Phone *</label>
+            <input type="tel" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Designation</label>
+            <input type="text" placeholder="HR / Marketing / Procurement" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Product / Requirement</label>
+            <select id="form-category-select" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs bg-white focus:ring-2 focus:ring-brand-orange focus:outline-none">
+              <option>Executive Gifts</option>
+              <option>Employee Joining Kits</option>
+              <option>Festival Gifting & Hampers</option>
+              <option>Tech Gifts & Accessories</option>
+              <option>Awards & Trophies</option>
+              <option>Promotional Merchandise</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Quantity</label>
+            <select class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs bg-white focus:ring-2 focus:ring-brand-orange focus:outline-none">
+              <option>25 - 50 Units</option>
+              <option>50 - 100 Units</option>
+              <option>100 - 500 Units</option>
+              <option>500 - 2,000 Units</option>
+              <option>2,000+ Units (Enterprise)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Budget</label>
+            <select class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs bg-white focus:ring-2 focus:ring-brand-orange focus:outline-none">
+              <option>₹500 - ₹1,000 per gift</option>
+              <option>₹1,000 - ₹2,500 per gift</option>
+              <option>₹2,500 - ₹5,000 per gift</option>
+              <option>₹5,000+ (Luxury Segment)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Delivery City *</label>
+            <input type="text" required placeholder="e.g. Mumbai, Bengaluru (or Multi-location)" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5">Required Delivery Date</label>
+            <input type="date" class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">Message / Requirements</label>
+          <textarea rows="3" placeholder="Mention branding details, color palette, or specific items required..." class="w-full px-3.5 py-2.5 rounded-md border border-brand-border text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-sm rounded-md shadow-md flex items-center justify-center space-x-2 transition-all">
+          <span>Request Corporate Quote</span>
+          <i data-lucide="send" class="w-4 h-4 text-brand-orange"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Accordion FAQ Section -->
+  <section id="faq" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">FAQ</span>
+      <h2 class="text-3xl font-extrabold text-brand-navy mt-1">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="space-y-3">
+      
+      <div class="border border-brand-border rounded-lg overflow-hidden bg-white">
+        <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-bold text-xs sm:text-sm text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
+          <span>What is the minimum order quantity?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+        </button>
+        <div class="faq-content hidden px-4 pb-4 text-xs text-brand-muted leading-relaxed border-t border-slate-100 pt-3">
+          Our standard MOQ starts from 25 units for catalog items with custom branding. For bespoke kits and customized hampers, MOQs typically range between 25 and 50 units.
+        </div>
+      </div>
+
+      <div class="border border-brand-border rounded-lg overflow-hidden bg-white">
+        <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-bold text-xs sm:text-sm text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
+          <span>Can products be customised with our company logo?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+        </button>
+        <div class="faq-content hidden px-4 pb-4 text-xs text-brand-muted leading-relaxed border-t border-slate-100 pt-3">
+          Yes. We provide comprehensive branding options including laser engraving, screen printing, UV printing, embroidery, embossing, and full custom box packaging.
+        </div>
+      </div>
+
+      <div class="border border-brand-border rounded-lg overflow-hidden bg-white">
+        <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-bold text-xs sm:text-sm text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
+          <span>Do you provide bulk corporate pricing?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+        </button>
+        <div class="faq-content hidden px-4 pb-4 text-xs text-brand-muted leading-relaxed border-t border-slate-100 pt-3">
+          Yes. As a pure B2B procurement platform, our quotation models are tiered—meaning the unit cost decreases with higher order volumes.
+        </div>
+      </div>
+
+      <div class="border border-brand-border rounded-lg overflow-hidden bg-white">
+        <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-bold text-xs sm:text-sm text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
+          <span>Do you deliver across India?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+        </button>
+        <div class="faq-content hidden px-4 pb-4 text-xs text-brand-muted leading-relaxed border-t border-slate-100 pt-3">
+          We ship in bulk to corporate headquarters and multi-branch offices or individual doorstep dispatches to work-from-home team members across Tier 1, 2, and 3 pin codes.
+        </div>
+      </div>
+
+      <div class="border border-brand-border rounded-lg overflow-hidden bg-white">
+        <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-bold text-xs sm:text-sm text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
+          <span>How long does corporate gifting production take?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+        </button>
+        <div class="faq-content hidden px-4 pb-4 text-xs text-brand-muted leading-relaxed border-t border-slate-100 pt-3">
+          Standard catalog products with branding ship within 5-7 business days. Fully custom hampers and high-volume manufactured kits take approximately 10-14 days.
+        </div>
+      </div>
+
+      <div class="border border-brand-border rounded-lg overflow-hidden bg-white">
+        <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-bold text-xs sm:text-sm text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
+          <span>Can you provide samples before bulk orders?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+        </button>
+        <div class="faq-content hidden px-4 pb-4 text-xs text-brand-muted leading-relaxed border-t border-slate-100 pt-3">
+          Yes. We provide sample units for quality evaluation and digital 3D branding mockups prior to initiating bulk production runs.
+        </div>
+      </div>
+
+      <div class="border border-brand-border rounded-lg overflow-hidden bg-white">
+        <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-bold text-xs sm:text-sm text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
+          <span>Do you provide GST invoices?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+        </button>
+        <div class="faq-content hidden px-4 pb-4 text-xs text-brand-muted leading-relaxed border-t border-slate-100 pt-3">
+          Yes. All orders are processed with itemized B2B GST tax invoices supporting standard HSN codes for input tax credit claims.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-brand-navy text-white py-14">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+      <h2 class="text-3xl sm:text-4xl font-black">Let's Create Gifts Worth Remembering.</h2>
+      <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+        From a single executive gift to thousands of customised corporate hampers, GIFTXINDIA helps businesses make every occasion memorable.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-3 pt-2">
+        <a href="#quote-section" class="px-7 py-3 bg-brand-orange hover:bg-brand-orange-hover text-white text-xs font-bold rounded shadow-md">
+          Get a Quote
+        </a>
+        <a href="https://wa.me/9194517250757?text=Hello%20GIFTXINDIA%20Team,%20I%20am%20interested%20in%20corporate%20gifting." target="_blank" rel="noopener noreferrer" class="px-7 py-3 bg-white/10 hover:bg-white/20 text-white text-xs font-bold rounded border border-white/20">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Logo -->
+  <footer class="bg-brand-navy-dark text-slate-400 text-xs py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Footer Logo & Details -->
+      <div class="space-y-3">
+        <div class="bg-white/95 p-2 rounded-lg inline-block">
+          <svg viewBox="0 0 540 135" class="h-9 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48 24C48 10 32 6 22 20C12 34 46 44 48 44C50 44 84 34 74 20C64 6 48 10 48 24Z" stroke="#0B1B3D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M12 44C26 38 48 44 48 44C48 44 70 38 84 44" fill="#F58220"/>
+            <rect x="10" y="44" width="76" height="15" rx="3" fill="#0B1B3D"/>
+            <path d="M15 63H81V96C81 103 76 109 48 112C20 109 15 103 15 96V63Z" fill="#0B1B3D"/>
+            <polygon points="41,63 55,63 52,73 44,73" fill="#F58220"/>
+            <polygon points="44,75 52,75 56,104 48,114 40,104" fill="#F58220"/>
+
+            <text x="106" y="66" font-family="Inter, sans-serif" font-weight="900" font-size="62" fill="#0B1B3D" letter-spacing="-1.5">giftx</text>
+            <text x="256" y="66" font-family="Inter, sans-serif" font-weight="900" font-size="62" fill="#0B1B3D" letter-spacing="-1.5">india</text>
+
+            <line x1="108" y1="96" x2="148" y2="96" stroke="#F58220" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="156" y="99" font-family="Inter, sans-serif" font-weight="800" font-size="16" fill="#0B1B3D" letter-spacing="4">CORPORATE GIFTS,</text>
+            <line x1="392" y1="96" x2="432" y2="96" stroke="#F58220" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="142" y="122" font-family="Inter, sans-serif" font-weight="800" font-size="16" fill="#0B1B3D" letter-spacing="4.5">LASTING IMPRESSIONS</text>
+          </svg>
+        </div>
+        <p class="leading-relaxed text-slate-400">
+          Premium Corporate Gifting & Promotional Merchandise Procurement across India.
+        </p>
+        <p class="text-slate-300">Email: contact@giftxindia.com</p>
+        <p class="text-slate-300">Website: giftxindia.com</p>
+      </div>
+
       <div>
-        <h5 class="text-white font-bold uppercase text-xs mb-3">Quick Navigation</h5>
-        <ul class="space-y-2 text-xs">
-          <li><a href="javascript:void(0)" onclick="switchPage('catalog')" class="hover:text-brandOrange">Product Catalog</a></li>
-          <li><a href="javascript:void(0)" onclick="switchPage('branding')" class="hover:text-brandOrange">Custom Branding Studio</a></li>
-          <li><a href="javascript:void(0)" onclick="switchPage('pricing')" class="hover:text-brandOrange">Price Estimator</a></li>
-          <li><a href="javascript:void(0)" onclick="switchPage('process')" class="hover:text-brandOrange">How It Works</a></li>
+        <div class="text-white font-bold mb-2.5 uppercase tracking-wider text-[11px]">Quick Links</div>
+        <ul class="space-y-1.5">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#categories" class="hover:text-white">Corporate Gifts</a></li>
+          <li><a href="#customization" class="hover:text-white">Customised Gifts</a></li>
+          <li><a href="#products" class="hover:text-white">Festive Gifting</a></li>
+          <li><a href="#solutions" class="hover:text-white">Employee Gifting</a></li>
+          <li><a href="#quote-section" class="hover:text-white">Contact Us</a></li>
         </ul>
       </div>
 
-      <!-- Col 3 -->
       <div>
-        <h5 class="text-white font-bold uppercase text-xs mb-3">Compliance & Trust</h5>
-        <ul class="space-y-2 text-xs">
-          <li>Pan-India Multi-Address Logistics</li>
-          <li>GST-Invoicing & B2B Tax Credits</li>
-          <li>NDAs for Brand Releases</li>
-          <li>Strict Zero-Defect Quality Control</li>
+        <div class="text-white font-bold mb-2.5 uppercase tracking-wider text-[11px]">Services</div>
+        <ul class="space-y-1.5">
+          <li><a href="#products" class="hover:text-white">Promotional Products</a></li>
+          <li><a href="#products" class="hover:text-white">Awards & Trophies</a></li>
+          <li><a href="#products" class="hover:text-white">Custom Hampers</a></li>
+          <li><a href="#customization" class="hover:text-white">Branding & Printing</a></li>
+          <li><a href="#quote-section" class="hover:text-white">Bulk Procurement</a></li>
         </ul>
       </div>
 
-      <!-- Col 4 -->
       <div>
-        <h5 class="text-white font-bold uppercase text-xs mb-3">Corporate Concierge</h5>
-        <p class="text-xs text-slate-300">Email: <a href="mailto:info.giftxindia@gmail.com" class="hover:text-brandOrange">info.giftxindia@gmail.com</a></p>
-        <p class="text-xs text-slate-300 mt-1">Phone: <a href="tel:+919451720757" class="hover:text-brandOrange">+91 94517 20757</a></p>
+        <div class="text-white font-bold mb-2.5 uppercase tracking-wider text-[11px]">PAN India Operations</div>
+        <p class="leading-relaxed">
+          Registered GST input billing. Bulk orders dispatched through insured logistics networks to Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune, Chennai, and PAN India.
+        </p>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
-      <p>© 2026 Giftxindia Solutions. All Rights Reserved.</p>
-      <p>Corporate Gifts, Lasting Impressions.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>© 2026 GIFTXINDIA. All Rights Reserved.</p>
+      <div class="flex space-x-4">
+        <span class="hover:text-white cursor-pointer">Privacy Policy</span>
+        <span>•</span>
+        <span class="hover:text-white cursor-pointer">Terms & Conditions</span>
+        <span>•</span>
+        <span class="hover:text-white cursor-pointer">Shipping Policy</span>
+        <span>•</span>
+        <span class="hover:text-white cursor-pointer">Return Policy</span>
+      </div>
     </div>
   </footer>
 
-  <!-- SCRIPT LOGIC -->
+  <!-- Floating WhatsApp Trigger -->
+  <a href="https://wa.me/9194517250757?text=Hello%20GIFTXINDIA%20Team,%20I%20am%20interested%20in%20corporate%20gifting.%20Please%20share%20your%20catalogue%20and%20quotation." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110" aria-label="WhatsApp Us">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </a>
+
+  <!-- Interactive JavaScript Functionality -->
   <script>
-    // Initialize Icons
+    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // 8-Page Multi-View Switcher
-    function switchPage(pageId) {
-      // Hide all views
-      document.querySelectorAll('.page-view').forEach(view => {
-        view.classList.remove('active');
-      });
+    // 5-Image Carousel State & Functions
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicatorContainer = document.getElementById('hero-indicators');
+    const indicators = indicatorContainer ? indicatorContainer.querySelectorAll('button') : [];
+    let sliderInterval = setInterval(nextHeroSlide, 4500);
 
-      // Remove active highlight from all nav buttons
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-
-      // Show target view
-      const targetView = document.getElementById('view-' + pageId);
-      if (targetView) {
-        targetView.classList.add('active');
-      }
-
-      // Highlight target nav
-      const targetNav = document.getElementById('nav-' + pageId);
-      if (targetNav) {
-        targetNav.classList.add('active');
-      }
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Hero Slider Controller
-    let currentSlideIndex = 0;
-    const slides = document.querySelectorAll('.slide-item');
-
-    function updateSlider(index) {
-      slides.forEach((slide, i) => {
-        if (i === index) {
+    function updateHeroSlider() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
           slide.classList.remove('opacity-0', 'pointer-events-none');
           slide.classList.add('opacity-100');
         } else {
@@ -842,35 +1282,159 @@
           slide.classList.remove('opacity-100');
         }
       });
+
+      indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+          indicator.className = 'w-6 h-1.5 rounded-full bg-brand-orange transition-all duration-300';
+        } else {
+          indicator.className = 'w-2 h-1.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300';
+        }
+      });
     }
 
-    function moveSlide(direction) {
-      currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
-      updateSlider(currentSlideIndex);
+    function nextHeroSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateHeroSlider();
     }
 
-    setInterval(() => moveSlide(1), 5500);
-
-    // Interactive Pricing Calculator
-    function calculateTotal() {
-      const tier = parseFloat(document.getElementById('price-tier').value);
-      const qty = parseInt(document.getElementById('price-qty').value);
-      let discount = 0;
-      if (qty >= 1000) discount = 0.20;
-      else if (qty >= 500) discount = 0.12;
-      else if (qty >= 150) discount = 0.05;
-
-      const subtotal = tier * qty * (1 - discount);
-      document.getElementById('price-total').innerText = '₹' + Math.round(subtotal).toLocaleString('en-IN');
+    function changeHeroSlide(direction) {
+      clearInterval(sliderInterval);
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      updateHeroSlider();
+      sliderInterval = setInterval(nextHeroSlide, 4500);
     }
 
-    document.getElementById('price-tier').addEventListener('change', calculateTotal);
-    document.getElementById('price-qty').addEventListener('change', calculateTotal);
+    function setHeroSlide(index) {
+      clearInterval(sliderInterval);
+      currentSlide = index;
+      updateHeroSlider();
+      sliderInterval = setInterval(nextHeroSlide, 4500);
+    }
 
-    // RFP Form Handler
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      alert('Thank you! Your quote request has been routed to the Giftxindia Concierge (+91 94517 20757). We will call you within 4 hours.');
+    // Sticky Header Shadow on Scroll
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-md');
+      } else {
+        header.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-md');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    mobileBtn.addEventListener('click', function() {
+      mobileDrawer.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.add('hidden');
+      });
+    });
+
+    // Category Filter Handler
+    function filterProducts(category) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-cat') === category) {
+          btn.className = 'tab-btn px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-navy text-white';
+        } else {
+          btn.className = 'tab-btn px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:bg-slate-100';
+        }
+      });
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Product Search Handler
+    function searchProducts() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      const cards = document.querySelectorAll('.product-card');
+
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name').toLowerCase();
+        const desc = card.getAttribute('data-desc').toLowerCase();
+        if (name.includes(query) || desc.includes(query)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Pass Product Info Directly into Quotation Form
+    function requestProductQuote(productName, category) {
+      document.getElementById('form-product-name').value = productName;
+      document.getElementById('selected-product-label').textContent = productName;
+      document.getElementById('quote-alert').classList.remove('hidden');
+      
+      const select = document.getElementById('form-category-select');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.includes(category)) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+
+      document.getElementById('quote-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function setFormCategory(categoryName) {
+      const select = document.getElementById('form-category-select');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.includes(categoryName)) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    function clearSelectedProduct() {
+      document.getElementById('form-product-name').value = '';
+      document.getElementById('quote-alert').classList.add('hidden');
+    }
+
+    // Form Submission Engine
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      document.getElementById('quote-form').classList.add('hidden');
+      document.getElementById('form-success-message').classList.remove('hidden');
+      document.getElementById('quote-alert').classList.add('hidden');
+    }
+
+    function resetQuoteForm() {
+      document.getElementById('quote-form').reset();
+      document.getElementById('quote-form').classList.remove('hidden');
+      document.getElementById('form-success-message').classList.add('hidden');
+    }
+
+    // Accordion Toggle Handler
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('svg');
+      
+      const isOpen = !content.classList.contains('hidden');
+      
+      // Close all FAQs
+      document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('#faq button svg').forEach(el => el.classList.remove('rotate-180', 'text-brand-orange'));
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        if (icon) {
+          icon.classList.add('rotate-180', 'text-brand-orange');
+        }
+      }
     }
   </script>
 </body>
